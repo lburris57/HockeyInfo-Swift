@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		766538AB23A64336008D8F5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766538AA23A64336008D8F5F /* AppDelegate.swift */; };
+		766538AD23A64336008D8F5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766538AC23A64336008D8F5F /* SceneDelegate.swift */; };
+		766538AF23A64336008D8F5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766538AE23A64336008D8F5F /* ViewController.swift */; };
+		766538B223A64336008D8F5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 766538B023A64336008D8F5F /* Main.storyboard */; };
+		766538B423A64338008D8F5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 766538B323A64338008D8F5F /* Assets.xcassets */; };
+		766538B723A64338008D8F5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 766538B523A64338008D8F5F /* LaunchScreen.storyboard */; };
+		766538C223A64338008D8F5F /* HockeyInfo_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766538C123A64338008D8F5F /* HockeyInfo_SwiftTests.swift */; };
+		766538CD23A64338008D8F5F /* HockeyInfo_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766538CC23A64338008D8F5F /* HockeyInfo_SwiftUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		766538BE23A64338008D8F5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7665389F23A64336008D8F5F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 766538A623A64336008D8F5F;
+			remoteInfo = "HockeyInfo-Swift";
+		};
+		766538C923A64338008D8F5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7665389F23A64336008D8F5F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 766538A623A64336008D8F5F;
+			remoteInfo = "HockeyInfo-Swift";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		766538A723A64336008D8F5F /* HockeyInfo-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HockeyInfo-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		766538AA23A64336008D8F5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		766538AC23A64336008D8F5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		766538AE23A64336008D8F5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		766538B123A64336008D8F5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		766538B323A64338008D8F5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		766538B623A64338008D8F5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		766538B823A64338008D8F5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		766538BD23A64338008D8F5F /* HockeyInfo-SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HockeyInfo-SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		766538C123A64338008D8F5F /* HockeyInfo_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HockeyInfo_SwiftTests.swift; sourceTree = "<group>"; };
+		766538C323A64338008D8F5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		766538C823A64338008D8F5F /* HockeyInfo-SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HockeyInfo-SwiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		766538CC23A64338008D8F5F /* HockeyInfo_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HockeyInfo_SwiftUITests.swift; sourceTree = "<group>"; };
+		766538CE23A64338008D8F5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		766538A423A64336008D8F5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		766538BA23A64338008D8F5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		766538C523A64338008D8F5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7665389E23A64336008D8F5F = {
+			isa = PBXGroup;
+			children = (
+				766538A923A64336008D8F5F /* HockeyInfo-Swift */,
+				766538C023A64338008D8F5F /* HockeyInfo-SwiftTests */,
+				766538CB23A64338008D8F5F /* HockeyInfo-SwiftUITests */,
+				766538A823A64336008D8F5F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		766538A823A64336008D8F5F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				766538A723A64336008D8F5F /* HockeyInfo-Swift.app */,
+				766538BD23A64338008D8F5F /* HockeyInfo-SwiftTests.xctest */,
+				766538C823A64338008D8F5F /* HockeyInfo-SwiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		766538A923A64336008D8F5F /* HockeyInfo-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				766538AA23A64336008D8F5F /* AppDelegate.swift */,
+				766538AC23A64336008D8F5F /* SceneDelegate.swift */,
+				766538AE23A64336008D8F5F /* ViewController.swift */,
+				766538B023A64336008D8F5F /* Main.storyboard */,
+				766538B323A64338008D8F5F /* Assets.xcassets */,
+				766538B523A64338008D8F5F /* LaunchScreen.storyboard */,
+				766538B823A64338008D8F5F /* Info.plist */,
+			);
+			path = "HockeyInfo-Swift";
+			sourceTree = "<group>";
+		};
+		766538C023A64338008D8F5F /* HockeyInfo-SwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				766538C123A64338008D8F5F /* HockeyInfo_SwiftTests.swift */,
+				766538C323A64338008D8F5F /* Info.plist */,
+			);
+			path = "HockeyInfo-SwiftTests";
+			sourceTree = "<group>";
+		};
+		766538CB23A64338008D8F5F /* HockeyInfo-SwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				766538CC23A64338008D8F5F /* HockeyInfo_SwiftUITests.swift */,
+				766538CE23A64338008D8F5F /* Info.plist */,
+			);
+			path = "HockeyInfo-SwiftUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		766538A623A64336008D8F5F /* HockeyInfo-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 766538D123A64338008D8F5F /* Build configuration list for PBXNativeTarget "HockeyInfo-Swift" */;
+			buildPhases = (
+				766538A323A64336008D8F5F /* Sources */,
+				766538A423A64336008D8F5F /* Frameworks */,
+				766538A523A64336008D8F5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HockeyInfo-Swift";
+			productName = "HockeyInfo-Swift";
+			productReference = 766538A723A64336008D8F5F /* HockeyInfo-Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		766538BC23A64338008D8F5F /* HockeyInfo-SwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 766538D423A64338008D8F5F /* Build configuration list for PBXNativeTarget "HockeyInfo-SwiftTests" */;
+			buildPhases = (
+				766538B923A64338008D8F5F /* Sources */,
+				766538BA23A64338008D8F5F /* Frameworks */,
+				766538BB23A64338008D8F5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				766538BF23A64338008D8F5F /* PBXTargetDependency */,
+			);
+			name = "HockeyInfo-SwiftTests";
+			productName = "HockeyInfo-SwiftTests";
+			productReference = 766538BD23A64338008D8F5F /* HockeyInfo-SwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		766538C723A64338008D8F5F /* HockeyInfo-SwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 766538D723A64338008D8F5F /* Build configuration list for PBXNativeTarget "HockeyInfo-SwiftUITests" */;
+			buildPhases = (
+				766538C423A64338008D8F5F /* Sources */,
+				766538C523A64338008D8F5F /* Frameworks */,
+				766538C623A64338008D8F5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				766538CA23A64338008D8F5F /* PBXTargetDependency */,
+			);
+			name = "HockeyInfo-SwiftUITests";
+			productName = "HockeyInfo-SwiftUITests";
+			productReference = 766538C823A64338008D8F5F /* HockeyInfo-SwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7665389F23A64336008D8F5F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "Larry Burris";
+				TargetAttributes = {
+					766538A623A64336008D8F5F = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					766538BC23A64338008D8F5F = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 766538A623A64336008D8F5F;
+					};
+					766538C723A64338008D8F5F = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 766538A623A64336008D8F5F;
+					};
+				};
+			};
+			buildConfigurationList = 766538A223A64336008D8F5F /* Build configuration list for PBXProject "HockeyInfo-Swift" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7665389E23A64336008D8F5F;
+			productRefGroup = 766538A823A64336008D8F5F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				766538A623A64336008D8F5F /* HockeyInfo-Swift */,
+				766538BC23A64338008D8F5F /* HockeyInfo-SwiftTests */,
+				766538C723A64338008D8F5F /* HockeyInfo-SwiftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		766538A523A64336008D8F5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				766538B723A64338008D8F5F /* LaunchScreen.storyboard in Resources */,
+				766538B423A64338008D8F5F /* Assets.xcassets in Resources */,
+				766538B223A64336008D8F5F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		766538BB23A64338008D8F5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		766538C623A64338008D8F5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		766538A323A64336008D8F5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				766538AF23A64336008D8F5F /* ViewController.swift in Sources */,
+				766538AB23A64336008D8F5F /* AppDelegate.swift in Sources */,
+				766538AD23A64336008D8F5F /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		766538B923A64338008D8F5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				766538C223A64338008D8F5F /* HockeyInfo_SwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		766538C423A64338008D8F5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				766538CD23A64338008D8F5F /* HockeyInfo_SwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		766538BF23A64338008D8F5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 766538A623A64336008D8F5F /* HockeyInfo-Swift */;
+			targetProxy = 766538BE23A64338008D8F5F /* PBXContainerItemProxy */;
+		};
+		766538CA23A64338008D8F5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 766538A623A64336008D8F5F /* HockeyInfo-Swift */;
+			targetProxy = 766538C923A64338008D8F5F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		766538B023A64336008D8F5F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				766538B123A64336008D8F5F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		766538B523A64338008D8F5F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				766538B623A64338008D8F5F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		766538CF23A64338008D8F5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		766538D023A64338008D8F5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		766538D223A64338008D8F5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C37927XKUL;
+				INFOPLIST_FILE = "HockeyInfo-Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.larry.burris.HockeyInfo-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		766538D323A64338008D8F5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C37927XKUL;
+				INFOPLIST_FILE = "HockeyInfo-Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.larry.burris.HockeyInfo-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		766538D523A64338008D8F5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C37927XKUL;
+				INFOPLIST_FILE = "HockeyInfo-SwiftTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.larry.burris.HockeyInfo-SwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HockeyInfo-Swift.app/HockeyInfo-Swift";
+			};
+			name = Debug;
+		};
+		766538D623A64338008D8F5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C37927XKUL;
+				INFOPLIST_FILE = "HockeyInfo-SwiftTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.larry.burris.HockeyInfo-SwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HockeyInfo-Swift.app/HockeyInfo-Swift";
+			};
+			name = Release;
+		};
+		766538D823A64338008D8F5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C37927XKUL;
+				INFOPLIST_FILE = "HockeyInfo-SwiftUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.larry.burris.HockeyInfo-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "HockeyInfo-Swift";
+			};
+			name = Debug;
+		};
+		766538D923A64338008D8F5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C37927XKUL;
+				INFOPLIST_FILE = "HockeyInfo-SwiftUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.larry.burris.HockeyInfo-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "HockeyInfo-Swift";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		766538A223A64336008D8F5F /* Build configuration list for PBXProject "HockeyInfo-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				766538CF23A64338008D8F5F /* Debug */,
+				766538D023A64338008D8F5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		766538D123A64338008D8F5F /* Build configuration list for PBXNativeTarget "HockeyInfo-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				766538D223A64338008D8F5F /* Debug */,
+				766538D323A64338008D8F5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		766538D423A64338008D8F5F /* Build configuration list for PBXNativeTarget "HockeyInfo-SwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				766538D523A64338008D8F5F /* Debug */,
+				766538D623A64338008D8F5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		766538D723A64338008D8F5F /* Build configuration list for PBXNativeTarget "HockeyInfo-SwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				766538D823A64338008D8F5F /* Debug */,
+				766538D923A64338008D8F5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7665389F23A64336008D8F5F /* Project object */;
+}
