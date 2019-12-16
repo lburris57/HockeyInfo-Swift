@@ -17,6 +17,8 @@ class NHLTeam : Object
     @objc dynamic var division : String = ""
     @objc dynamic var conference : String = ""
     @objc dynamic var dateCreated: String = ""
+    @objc dynamic var season: String = Constants.EMPTY_STRING
+    @objc dynamic var seasonType = Constants.EMPTY_STRING
     
     var players = List<NHLPlayer>()
     var standings = List<TeamStandings>()

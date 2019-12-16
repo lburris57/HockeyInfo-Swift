@@ -20,6 +20,8 @@ class NHLPlayerInjury : Object
     @objc dynamic var injuryDescription : String = ""
     @objc dynamic var playingProbablity : String = ""
     @objc dynamic var dateCreated: String = ""
+    @objc dynamic var season: String = Constants.EMPTY_STRING
+    @objc dynamic var seasonType = Constants.EMPTY_STRING
     
     var parentPlayer = LinkingObjects(fromType: NHLPlayer.self, property: "playerInjuries")
     var parentTeam = LinkingObjects(fromType: NHLTeam.self, property: "playerInjuries")

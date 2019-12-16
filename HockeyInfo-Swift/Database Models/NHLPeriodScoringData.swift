@@ -17,6 +17,8 @@ class NHLPeriodScoringData: Object
     @objc dynamic var periodSecondsElapsed: Int = 0
     @objc dynamic var playDescription: String = ""
     @objc dynamic var dateCreated: String = ""
+    @objc dynamic var season: String = Constants.EMPTY_STRING
+    @objc dynamic var seasonType = Constants.EMPTY_STRING
     
     var parentTeam = LinkingObjects(fromType: NHLScoringSummary.self, property: "periodScoringList")
     

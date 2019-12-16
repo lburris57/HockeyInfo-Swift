@@ -60,6 +60,8 @@ class NHLGameLog: Object
     @objc dynamic var awayHits: Int = 0
     @objc dynamic var lastUpdatedOn: String = ""
     @objc dynamic var dateCreated: String = ""
+    @objc dynamic var season: String = Constants.EMPTY_STRING
+    @objc dynamic var seasonType = Constants.EMPTY_STRING
     
     var parentTeam = LinkingObjects(fromType: NHLTeam.self, property: "gameLogs")
     

@@ -13,6 +13,8 @@ struct Constants
     
     static let USER_ID = "6faa8a21-d219-433a-914b-fcd2d4:MYSPORTSFEEDS"
     
+    static let EMPTY_STRING = ""
+    
     //Times and dates
     static let SHORT_DATE_FORMAT = "yyyyMMdd"
     static let LONG_DATE_FORMAT = "EEEE, MMM dd, yyyy"

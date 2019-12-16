@@ -22,6 +22,8 @@ class TeamStandings: Object
     @objc dynamic var overtimeLosses : Int = 0
     @objc dynamic var points : Int = 0
     @objc dynamic var dateCreated: String = ""
+    @objc dynamic var season: String = Constants.EMPTY_STRING
+    @objc dynamic var seasonType = Constants.EMPTY_STRING
     
     var parentTeam = LinkingObjects(fromType: NHLTeam.self, property: "standings")
     

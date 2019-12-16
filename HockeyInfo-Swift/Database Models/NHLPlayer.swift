@@ -26,6 +26,8 @@ class NHLPlayer : Object
     @objc dynamic var imageURL : String = ""
     @objc dynamic var shoots : String = ""
     @objc dynamic var dateCreated: String = ""
+    @objc dynamic var season: String = Constants.EMPTY_STRING
+    @objc dynamic var seasonType = Constants.EMPTY_STRING
     
     var playerStatisticsList = List<PlayerStatistics>()
     var playerInjuries = List<NHLPlayerInjury>()

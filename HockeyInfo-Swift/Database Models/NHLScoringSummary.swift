@@ -19,6 +19,8 @@ class NHLScoringSummary: Object
     @objc dynamic var awayScoreTotal : Int = 0
     @objc dynamic var numberOfPeriods : Int = 0
     @objc dynamic var dateCreated: String = ""
+    @objc dynamic var season: String = Constants.EMPTY_STRING
+    @objc dynamic var seasonType = Constants.EMPTY_STRING
 
     var periodScoringList = List<NHLPeriodScoringData>()
     

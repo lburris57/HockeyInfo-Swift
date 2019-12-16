@@ -34,6 +34,8 @@ class TeamStatistics : Object
     @objc dynamic var faceoffLosses: Int = 0
     @objc dynamic var faceoffPercent: Double = 0.0
     @objc dynamic var dateCreated: String = ""
+    @objc dynamic var season: String = Constants.EMPTY_STRING
+    @objc dynamic var seasonType = Constants.EMPTY_STRING
     
     var parentTeam = LinkingObjects(fromType: NHLTeam.self, property: "statistics")
     
