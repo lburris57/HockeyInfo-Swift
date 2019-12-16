@@ -219,4 +219,180 @@ struct ConvertNetworkModelToDatabaseModel
         
         return teamStatisticsList
     }
+    
+    func convertNHLStandingsToNHLTeamList(_ nhlStandings: NHLStandings) -> [NHLTeam]
+    {
+        var teamList = [NHLTeam]()
+        
+        for teamStandingsData in nhlStandings.teamList
+        {
+            let nhlTeam = NHLTeam()
+            
+            nhlTeam.dateCreated = TimeAndDateUtils.getCurrentDateAsString()
+            nhlTeam.id = teamStandingsData.teamInformation.id
+            nhlTeam.abbreviation = teamStandingsData.teamInformation.abbreviation
+            nhlTeam.city = teamStandingsData.teamInformation.city
+            nhlTeam.name = teamStandingsData.teamInformation.name
+            nhlTeam.division = teamStandingsData.divisionRankInfo.divisionName
+            nhlTeam.conference = teamStandingsData.conferenceRankInfo.conferenceName
+            
+            teamList.append(nhlTeam)
+        }
+        
+        return teamList
+    }
+    
+    func convertGameLogToNHLGameLogList(_ gameLog: GameLog) -> [NHLGameLog]
+    {
+        var gameLogDictionary = [Int:NHLGameLog]()
+        var gameLogList = [NHLGameLog]()
+        
+        let lastUpdatedOn = gameLog.lastUpdatedOn
+        
+        for gameLogData in gameLog.gameLogDataList
+        {
+            var nhlGameLog: NHLGameLog
+        
+            var found = false
+        
+            let gameId = gameLogData.game.id
+            let teamAbbreviation = gameLogData.team.abbreviation
+        
+            //  If game id is found in the dictionary, update that object,
+            //  otherwise, create a new one to be inserted
+            if gameLogDictionary.keys.contains(gameId)
+            {
+                found = true
+                
+                nhlGameLog = gameLogDictionary[gameId]!
+            }
+            else
+            {
+                nhlGameLog = NHLGameLog()
+                nhlGameLog.id = gameId
+            }
+        
+            let timeString = gameLogData.game.startTime
+        
+            nhlGameLog.dateCreated = TimeAndDateUtils.getCurrentDateAsString()
+            nhlGameLog.lastUpdatedOn = lastUpdatedOn
+            nhlGameLog.date = TimeAndDateUtils.getDate(timeString)
+            nhlGameLog.time = TimeAndDateUtils.getTime(timeString)
+            nhlGameLog.playedStatus = PlayedStatusEnum.completed.rawValue
+        
+            //  If the game log is the home team, update the home team information,
+            //  otherwise, update the away team information
+            if gameLogData.game.homeTeamAbbreviation == teamAbbreviation
+            {
+                nhlGameLog.homeTeamId = gameLogData.team.id
+                nhlGameLog.homeTeamAbbreviation = gameLogData.game.homeTeamAbbreviation
+                nhlGameLog.homeWins = gameLogData.stats.standings.wins
+                nhlGameLog.homeLosses = gameLogData.stats.standings.losses
+                nhlGameLog.homeOvertimeWins = gameLogData.stats.standings.overtimeWins
+                nhlGameLog.homeOvertimeLosses = gameLogData.stats.standings.overtimeLosses
+                nhlGameLog.homePoints = gameLogData.stats.standings.points
+                nhlGameLog.homeFaceoffWins = gameLogData.stats.faceoffs.faceoffWins
+                nhlGameLog.homeFaceoffLosses = gameLogData.stats.faceoffs.faceoffLosses
+                nhlGameLog.homeFaceoffPercent = gameLogData.stats.faceoffs.faceoffPercent
+                nhlGameLog.homePowerplays = gameLogData.stats.powerplay.powerplays
+                nhlGameLog.homePowerplayGoals = gameLogData.stats.powerplay.powerplayGoals
+                nhlGameLog.homePowerplayPercent = gameLogData.stats.powerplay.powerplayPercent
+                nhlGameLog.homePenaltyKills = gameLogData.stats.powerplay.penaltyKills
+                nhlGameLog.homePenaltyKillGoalsAllowed = gameLogData.stats.powerplay.penaltyKillGoalsAllowed
+                nhlGameLog.homePenaltyKillPercent = gameLogData.stats.powerplay.penaltyKillPercent
+                nhlGameLog.homeGoalsFor = gameLogData.stats.miscellaneous.goalsFor
+                nhlGameLog.homeGoalsAgainst = gameLogData.stats.miscellaneous.goalsAgainst
+                nhlGameLog.homeShots = gameLogData.stats.miscellaneous.shots
+                nhlGameLog.homePenalties = gameLogData.stats.miscellaneous.penalties
+                nhlGameLog.homePenaltyMinutes = gameLogData.stats.miscellaneous.penaltyMinutes
+                nhlGameLog.homeHits = gameLogData.stats.miscellaneous.hits
+            }
+            else if gameLogData.game.awayTeamAbbreviation == teamAbbreviation
+            {
+                nhlGameLog.awayTeamId = gameLogData.team.id
+                nhlGameLog.awayTeamAbbreviation = gameLogData.game.awayTeamAbbreviation
+                nhlGameLog.awayWins = gameLogData.stats.standings.wins
+                nhlGameLog.awayLosses = gameLogData.stats.standings.losses
+                nhlGameLog.awayOvertimeWins = gameLogData.stats.standings.overtimeWins
+                nhlGameLog.awayOvertimeLosses = gameLogData.stats.standings.overtimeLosses
+                nhlGameLog.awayPoints = gameLogData.stats.standings.points
+                nhlGameLog.awayFaceoffWins = gameLogData.stats.faceoffs.faceoffWins
+                nhlGameLog.awayFaceoffLosses = gameLogData.stats.faceoffs.faceoffLosses
+                nhlGameLog.awayFaceoffPercent = gameLogData.stats.faceoffs.faceoffPercent
+                nhlGameLog.awayPowerplays = gameLogData.stats.powerplay.powerplays
+                nhlGameLog.awayPowerplayGoals = gameLogData.stats.powerplay.powerplayGoals
+                nhlGameLog.awayPowerplayPercent = gameLogData.stats.powerplay.powerplayPercent
+                nhlGameLog.awayPenaltyKills = gameLogData.stats.powerplay.penaltyKills
+                nhlGameLog.awayPenaltyKillGoalsAllowed = gameLogData.stats.powerplay.penaltyKillGoalsAllowed
+                nhlGameLog.awayPenaltyKillPercent = gameLogData.stats.powerplay.penaltyKillPercent
+                nhlGameLog.awayGoalsFor = gameLogData.stats.miscellaneous.goalsFor
+                nhlGameLog.awayGoalsAgainst = gameLogData.stats.miscellaneous.goalsAgainst
+                nhlGameLog.awayShots = gameLogData.stats.miscellaneous.shots
+                nhlGameLog.awayPenalties = gameLogData.stats.miscellaneous.penalties
+                nhlGameLog.awayPenaltyMinutes = gameLogData.stats.miscellaneous.penaltyMinutes
+                nhlGameLog.awayHits = gameLogData.stats.miscellaneous.hits
+            }
+        
+            //  If object was not found, add the created object to the dictionary
+            if !found
+            {
+                gameLogDictionary[gameId] = nhlGameLog
+            }
+        
+            //  Add the game log to the gameLogList
+            gameLogList.append(nhlGameLog)
+        }
+        
+        return gameLogList
+    }
+    
+    func convertScoringSummaryToNHLScoringSummary(_ scoringSummary: ScoringSummary) -> NHLScoringSummary
+    {
+        let nhlScoringSummary = NHLScoringSummary()
+        
+        let gameId = scoringSummary.game.id
+        
+        nhlScoringSummary.dateCreated = TimeAndDateUtils.getCurrentDateAsString()
+        nhlScoringSummary.id = gameId
+        nhlScoringSummary.gameId = gameId
+        nhlScoringSummary.playedStatus = scoringSummary.game.playedStatus
+        nhlScoringSummary.homeTeamAbbreviation = scoringSummary.game.homeTeam.abbreviation
+        nhlScoringSummary.awayTeamAbbreviation = scoringSummary.game.awayTeam.abbreviation
+        nhlScoringSummary.homeScoreTotal = scoringSummary.scoringInfo.homeScoreTotal
+        nhlScoringSummary.awayScoreTotal = scoringSummary.scoringInfo.awayScoreTotal
+        nhlScoringSummary.numberOfPeriods = scoringSummary.scoringInfo.periodList.count
+        
+        return nhlScoringSummary
+    }
+    
+    func convertScoringSummaryToNHLPeriodScoringDataList(_ scoringSummary: ScoringSummary, maxValue: Int) -> [NHLPeriodScoringData]
+    {
+        var nhlPeriodScoringDataList = [NHLPeriodScoringData]()
+        
+        let gameId = scoringSummary.game.id
+        
+        var max = maxValue
+        
+        for periodScoringData in scoringSummary.scoringInfo.periodList
+        {
+            for scoringPlay in periodScoringData.scoringPlays
+            {
+                let nhlPeriodScoringData = NHLPeriodScoringData()
+                
+                nhlPeriodScoringData.dateCreated = TimeAndDateUtils.getCurrentDateAsString()
+                nhlPeriodScoringData.id = max + 1
+                nhlPeriodScoringData.gameId = gameId
+                nhlPeriodScoringData.periodNumber = periodScoringData.periodNumber
+                nhlPeriodScoringData.teamAbbreviation = scoringPlay.team.abbreviation
+                nhlPeriodScoringData.periodSecondsElapsed = scoringPlay.periodSecondsElapsed
+                nhlPeriodScoringData.playDescription = scoringPlay.playDescription
+                
+                max += 1
+                
+                nhlPeriodScoringDataList.append(nhlPeriodScoringData)
+            }
+        }
+        
+        return nhlPeriodScoringDataList
+    }
 }

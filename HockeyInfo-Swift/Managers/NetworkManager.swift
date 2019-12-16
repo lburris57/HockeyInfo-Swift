@@ -9,7 +9,7 @@ import UIKit
 
 protocol NetworkManagerDelegate
 {
-    func didPerformNetworkCall<T>(_ networkManager: NetworkManager, decodedData: T)
+    func didPerformNetworkCall(_ data: Data)
     func didFailWithError(error: Error)
 }
 
@@ -17,51 +17,79 @@ struct NetworkManager
 {
     var delegate: NetworkManagerDelegate?
     
-    func performRequest<T: Decodable>(with urlString: String, type: T)
+    func fetchSeasonSchedule()
     {
-        if let url = URL(string: urlString)
-        {
-            let session = URLSession(configuration: .default)
-            
-            let task = session.dataTask(with: url)
-            {
-                (data, response, error) in
-                
-                if error != nil
-                {
-                    self.delegate?.didFailWithError(error: error!)
-                    
-                    return
-                }
-                
-                if let safeData = data
-                {
-                    if let decodedData = self.parseJSON(safeData, type: type)
-                    {
-                        self.delegate?.didPerformNetworkCall(self, decodedData: decodedData)
-                    }
-                }
-            }
-            task.resume()
-        }
+        let urlString = ""
+        
+        performRequest(with: createRequest(urlString))
     }
     
-    func parseJSON<T:Decodable>(_ data: Data, type: T) -> T?
+    func fetchRosterPlayers()
     {
-        let decoder = JSONDecoder()
+        let urlString = ""
         
-        do
-        {
-            let decodedData = try decoder.decode(T.self, from: data)
-            
-            return decodedData
-            
-        }
-        catch
-        {
-            delegate?.didFailWithError(error: error)
-        }
+        performRequest(with: createRequest(urlString))
+    }
+    
+    func fetchNHLStandings()
+    {
+        let urlString = ""
         
-        return nil
+        performRequest(with: createRequest(urlString))
+    }
+    
+    func fetchScoringSummary()
+    {
+        let urlString = ""
+        
+        performRequest(with: createRequest(urlString))
+    }
+    
+    func fetchGameLog()
+    {
+        let urlString = ""
+        
+        performRequest(with: createRequest(urlString))
+    }
+    
+    func updateScheduleForDate(_ date: Date)
+    {
+        let urlString = ""
+        
+        performRequest(with: createRequest(urlString))
+    }
+    
+    //  Perform a network request and call didPerformNetworkCall on the delegate
+    func performRequest(with request: URLRequest)
+    {
+        let session = URLSession(configuration: .default)
+        
+        let task = session.dataTask(with: request)
+        {
+            (data, response, error) in
+            
+            if error != nil
+            {
+                self.delegate?.didFailWithError(error: error!)
+            }
+            
+            if let data = data, let response = response as? HTTPURLResponse, response.statusCode == 200
+            {
+                self.delegate?.didPerformNetworkCall(data)
+            }
+        }
+        task.resume()
+    }
+    
+    //  Return a request populated with the URL and authorization information
+    private func createRequest(_ urlString: String) -> URLRequest
+    {
+        let url = URL(string: urlString)
+        
+        var request = URLRequest(url: url!)
+        
+        request.addValue(Constants.AUTHORIZATION_VALUE + Constants.USER_ID.toBase64()!, forHTTPHeaderField: Constants.AUTHORIZATION)
+        
+        return request
     }
 }

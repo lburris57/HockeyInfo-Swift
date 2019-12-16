@@ -7,6 +7,7 @@
 //
 import Foundation
 import UIKit
+import RealmSwift
 
 extension UIColor
 {
@@ -96,5 +97,13 @@ extension Int: Sequence
     public func makeIterator() -> CountableRange<Int>.Iterator
     {
         return (0..<self).makeIterator()
+    }
+}
+
+extension Results
+{
+    func toArray<T>(type: T.Type) -> [T]
+    {
+        return compactMap { $0 as? T }
     }
 }

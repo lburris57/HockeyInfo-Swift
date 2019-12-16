@@ -402,7 +402,7 @@ struct DatabaseManager
     
     func saveMainMenuCategories()
     {
-        let categories = ["Season Schedule", "Team Information", "Standings", "Scores"]
+        let categories = ["Season Schedule", "Team Information List", "Search Player Information", "Standings", "Scores", "Settings"]
         
         let categoryList = List<MainMenuCategory>()
         
@@ -528,7 +528,7 @@ struct DatabaseManager
         return scoringSummaryResult
     }
     
-    func retrieveScoresAsNHLSchedules(_ date: Date) -> Results<NHLSchedule>
+    func retrieveScoresAsNHLSchedules(_ date: Date) -> [NHLSchedule]
     {
         var scheduledGames : Results<NHLSchedule>?
         
@@ -546,10 +546,10 @@ struct DatabaseManager
             print("Error retrieving scheduled games for \(dateString)!")
         }
         
-        return scheduledGames!
+        return scheduledGames?.toArray(type: NHLSchedule.self) ?? [NHLSchedule]()
     }
     
-    func retrieveAllPlayers() -> Results<NHLPlayer>
+    func retrieveAllPlayers() -> [NHLPlayer]
     {
         var rosterResult: Results<NHLPlayer>?
         
@@ -565,10 +565,10 @@ struct DatabaseManager
             print("Error retrieving roster!")
         }
         
-        return rosterResult!
+        return rosterResult?.toArray(type: NHLPlayer.self) ?? [NHLPlayer]()
     }
     
-    func retrieveAllTeams() -> Results<NHLTeam>
+    func retrieveAllTeams() -> [NHLTeam]
     {
         var teamResult: Results<NHLTeam>?
         
@@ -584,10 +584,10 @@ struct DatabaseManager
             print("Error retrieving teams!")
         }
         
-        return teamResult!
+        return teamResult?.toArray(type: NHLTeam.self) ?? [NHLTeam]()
     }
     
-    func retrieveGameLogForDate(_ date: Date) -> Results<NHLGameLog>
+    func retrieveGameLogForDate(_ date: Date) -> [NHLGameLog]
     {
         var gameLogResult: Results<NHLGameLog>?
         
@@ -605,32 +605,32 @@ struct DatabaseManager
             print("Error retrieving game logs!")
         }
         
-        return gameLogResult!
+        return gameLogResult?.toArray(type: NHLGameLog.self) ?? [NHLGameLog]()
     }
     
-//    func retrieveMainMenuCategories() -> [MenuCategory]
-//    {
-//        var categories = [MenuCategory]()
-//
-//        do
-//        {
-//            try realm.write
-//            {
-//                let menuCategories = realm.objects(MainMenuCategory.self)
-//
-//                for menuCategory in menuCategories
-//                {
-//                    categories.append(MenuCategory(id: menuCategory.id, category: menuCategory.category, dateCreated: menuCategory.dateCreated))
-//                }
-//            }
-//        }
-//        catch
-//        {
-//            print("Error retrieving main menu categories!")
-//        }
-//
-//        return categories
-//    }
+    func retrieveMainMenuCategories() -> [MenuCategory]
+    {
+        var categories = [MenuCategory]()
+
+        do
+        {
+            try realm.write
+            {
+                let menuCategories = realm.objects(MainMenuCategory.self)
+
+                for menuCategory in menuCategories
+                {
+                    categories.append(MenuCategory(id: menuCategory.id, category: menuCategory.category, dateCreated: menuCategory.dateCreated))
+                }
+            }
+        }
+        catch
+        {
+            print("Error retrieving main menu categories!")
+        }
+
+        return categories
+    }
     
     // MARK: Link methods
     func teamTableRequiresLinking() -> Bool

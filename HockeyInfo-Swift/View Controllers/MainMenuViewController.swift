@@ -9,8 +9,15 @@ import UIKit
 
 class MainMenuViewController: UIViewController
 {
+    let databaseManager = DatabaseManager()
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        if(databaseManager.mainMenuCategoriesRequiresSaving())
+        {
+            databaseManager.saveMainMenuCategories()
+        }
     }
 }
