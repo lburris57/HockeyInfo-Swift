@@ -34,5 +34,9 @@ class WelcomeScreenViewController: UIViewController
         poweredByLabel.text = ""
         poweredByLabel.text = "Powered by My Sports Feeds"
     }
+    @IBAction func mainMenuButtonTapped(_ sender: UIButton)
+    {
+        self.performSegue(withIdentifier: "welcomeToMain", sender: nil)
+    }
 }
 

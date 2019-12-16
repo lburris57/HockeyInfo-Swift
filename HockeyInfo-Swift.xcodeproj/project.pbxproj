@@ -15,6 +15,7 @@
 		766538B723A64338008D8F5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 766538B523A64338008D8F5F /* LaunchScreen.storyboard */; };
 		766538C223A64338008D8F5F /* HockeyInfo_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766538C123A64338008D8F5F /* HockeyInfo_SwiftTests.swift */; };
 		766538CD23A64338008D8F5F /* HockeyInfo_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766538CC23A64338008D8F5F /* HockeyInfo_SwiftUITests.swift */; };
+		766538DC23A7512E008D8F5F /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766538DB23A7512E008D8F5F /* MainMenuViewController.swift */; };
 		80075FFBAEC9BF88D3C243A4 /* Pods_HockeyInfo_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1387EFE794C8CFF4D2060F83 /* Pods_HockeyInfo_Swift.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		766538C823A64338008D8F5F /* HockeyInfo-SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HockeyInfo-SwiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		766538CC23A64338008D8F5F /* HockeyInfo_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HockeyInfo_SwiftUITests.swift; sourceTree = "<group>"; };
 		766538CE23A64338008D8F5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		766538DB23A7512E008D8F5F /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +89,6 @@
 				081A34FA560CB84608037D42 /* Pods-HockeyInfo-Swift.debug.xcconfig */,
 				43745ED212ADDA948A96D136 /* Pods-HockeyInfo-Swift.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -149,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				766538AE23A64336008D8F5F /* WelcomeScreenViewController.swift */,
+				766538DB23A7512E008D8F5F /* MainMenuViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -336,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				766538DC23A7512E008D8F5F /* MainMenuViewController.swift in Sources */,
 				766538AF23A64336008D8F5F /* WelcomeScreenViewController.swift in Sources */,
 				766538AB23A64336008D8F5F /* AppDelegate.swift in Sources */,
 				766538AD23A64336008D8F5F /* SceneDelegate.swift in Sources */,
