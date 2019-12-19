@@ -14,258 +14,11 @@ struct DatabaseManager
     
     let today = Date()
     
+    let season = ""
+    let seasonType = ""
+    
     //  Create a new Realm database
     let realm = try! Realm()
-    
-    // MARK: Display Methods
-//    func displayPlayer(_ viewController: DisplayRosterViewController, _ id: Int)
-//    {
-//        var playerResult: NHLPlayer?
-//
-//        do
-//        {
-//            try realm.write
-//            {
-//                playerResult = realm.objects(NHLPlayer.self).filter("id ==\(id)").first
-//            }
-//        }
-//        catch
-//        {
-//            print("Error retrieving player!")
-//        }
-//
-//        viewController.performSegue(withIdentifier: "displayPlayer", sender: playerResult)
-//    }
-//
-//    func displayPlayerStatistics(_ viewController: DisplayPlayerViewController, _ playerId: Int)
-//    {
-//        var playerStatisticsResult: PlayerStatistics?
-//
-//        do
-//        {
-//            try realm.write
-//            {
-//                playerStatisticsResult = realm.objects(PlayerStatistics.self).filter("id ==\(playerId)").first
-//            }
-//        }
-//        catch
-//        {
-//            print("Error retrieving player statistics!")
-//        }
-//
-//        viewController.performSegue(withIdentifier: "displayPlayerStatistics", sender: playerStatisticsResult)
-//    }
-//
-//    func displayScoringSummary(_ viewController: DisplayGameLogViewController, _ gameId: Int)
-//    {
-//        var scoringSummaryResult: NHLScoringSummary?
-//
-//        do
-//        {
-//            try realm.write
-//            {
-//                scoringSummaryResult = realm.objects(NHLScoringSummary.self).filter("id ==\(gameId)").first
-//            }
-//        }
-//        catch
-//        {
-//            print("Error retrieving scoring summary!")
-//        }
-//
-//        viewController.performSegue(withIdentifier: "displayScoringSummary", sender: scoringSummaryResult)
-//    }
-//
-//    func displayGameLog(_ viewController: CompletedGamesViewController, _ gameId: Int)
-//    {
-//        var gameLogResult: NHLGameLog?
-//
-//        do
-//        {
-//            try realm.write
-//            {
-//                gameLogResult = realm.objects(NHLGameLog.self).filter("id ==\(gameId)").first
-//            }
-//        }
-//        catch
-//        {
-//            print("Error retrieving game log!")
-//        }
-//
-//        viewController.performSegue(withIdentifier: "displayGameLog", sender: gameLogResult)
-//    }
-//
-//    func displayGameLog(_ viewController: DisplayScoresViewController, _ gameId: Int)
-//    {
-//        var gameLogResult: NHLGameLog?
-//
-//        do
-//        {
-//            try realm.write
-//            {
-//                gameLogResult = realm.objects(NHLGameLog.self).filter("id ==\(gameId)").first
-//            }
-//        }
-//        catch
-//        {
-//            print("Error retrieving game log!")
-//        }
-//
-//        viewController.performSegue(withIdentifier: "displayGameLog", sender: gameLogResult)
-//    }
-    
-    func displayStandings(_ viewController: MainMenuViewController)
-    {
-        var standingsResult: Results<TeamStandings>?
-        
-        do
-        {
-            try realm.write
-            {
-                standingsResult = realm.objects(TeamStandings.self)
-            }
-        }
-        catch
-        {
-            print("Error retrieving team standings!")
-        }
-        
-        viewController.performSegue(withIdentifier: "displayStandings", sender: standingsResult)
-    }
-    
-    func displaySchedule(_ viewController: MainMenuViewController, _ segueId: String)
-    {
-        var scheduleResult: Results<NHLSchedule>?
-        
-        do
-        {
-            try realm.write
-            {
-                scheduleResult = realm.objects(NHLSchedule.self)
-            }
-        }
-        catch
-        {
-            print("Error retrieving schedule!")
-        }
-        
-        viewController.performSegue(withIdentifier: segueId, sender: scheduleResult)
-    }
-    
-    func displayTeams(_ viewController: MainMenuViewController, _ category:String)
-    {
-        var teamResults: Results<NHLTeam>?
-        
-        do
-        {
-            try realm.write
-            {
-                teamResults = realm.objects(NHLTeam.self)
-            }
-        }
-        catch
-        {
-            print("Error retrieving teams!")
-        }
-        
-        viewController.performSegue(withIdentifier: "displayAllTeams", sender: teamResults)
-    }
-    
-//    func displayRoster(_ viewController: DisplayTeamsViewController, _ teamId: Int)
-//    {
-//        var rosterResult: Results<NHLPlayer>?
-//
-//        do
-//        {
-//            try realm.write
-//            {
-//                rosterResult = realm.objects(NHLPlayer.self).filter("teamId ==\(teamId)")
-//            }
-//        }
-//        catch
-//        {
-//            print("Error retrieving roster!")
-//        }
-//
-//        viewController.performSegue(withIdentifier: "displayRoster", sender: rosterResult)
-//    }
-//
-//    func displayTeamInfo(_ viewController: DisplayTeamsViewController, _ teamId: Int)
-//    {
-//        var teamResult: Results<NHLTeam>?
-//
-//        do
-//        {
-//            try realm.write
-//            {
-//                teamResult = realm.objects(NHLTeam.self).filter("id ==\(teamId)")
-//            }
-//        }
-//        catch
-//        {
-//            print("Error retrieving team info!")
-//        }
-//
-//        viewController.performSegue(withIdentifier: "displayDefaultRoster", sender: teamResult)
-//    }
-//
-//    func displayInjuries(_ viewController: DisplayTeamsViewController, _ teamId: Int)
-//    {
-//        var injuryResult: Results<NHLPlayerInjury>?
-//
-//        do
-//        {
-//            try realm.write
-//            {
-//                injuryResult = realm.objects(NHLPlayerInjury.self).filter("teamId ==\(teamId)")
-//            }
-//        }
-//        catch
-//        {
-//            print("Error retrieving injuries!")
-//        }
-//
-//        viewController.performSegue(withIdentifier: "displayInjuries", sender: injuryResult)
-//    }
-//
-//    func displayTeamStatistics(_ viewController: DisplayTeamsViewController, _ teamId: Int)
-//    {
-//        var team : NHLTeam?
-//
-//        do
-//        {
-//            try realm.write
-//            {
-//                team = realm.objects(NHLTeam.self).filter("id = \(teamId)").first
-//            }
-//        }
-//        catch
-//        {
-//            print("Error retrieving team result for \(teamId)!")
-//        }
-//
-//        viewController.performSegue(withIdentifier: "displayTeamStatistics", sender: team)
-//    }
-//
-//    func displayTeamSchedule(_ viewController: DisplayTeamsViewController, _ teamId: Int)
-//    {
-//        var teamSchedules : Results<NHLSchedule>?
-//
-//        let team = TeamManager.getTeamByID(teamId)
-//
-//        do
-//        {
-//            try realm.write
-//            {
-//                teamSchedules = realm.objects(NHLSchedule.self).filter("homeTeam = '\(team)' OR awayTeam = '\(team)'")
-//            }
-//        }
-//        catch
-//        {
-//            print("Error retrieving schedule results for \(teamId)!")
-//        }
-//
-//        viewController.performSegue(withIdentifier: "displayTeamSchedule", sender: teamSchedules)
-//    }
     
     // MARK: Requires saving methods
     func mainMenuCategoriesRequiresSaving() -> Bool
@@ -400,6 +153,7 @@ struct DatabaseManager
         return result
     }
     
+    // MARK: Save methods
     func saveMainMenuCategories()
     {
         let categories = ["Season Schedule", "Team Information List", "Search Player Information", "Standings", "Scores", "Settings"]
@@ -442,25 +196,274 @@ struct DatabaseManager
         print(Realm.Configuration.defaultConfiguration.fileURL!)
     }
     
-    // MARK: Retrieve methods
-    func retrieveTodaysGames(_ mainViewController: MainMenuViewController)
+    func saveFullSeasonScheduleGameData(_ scheduledGames: [NHLSchedule])
     {
+        print("\n\nIn DatabaseManager.saveFullSeasonScheduleGameData method...\n\n")
+        
+        let startTime = Date().timeIntervalSince1970
+        
+        let dispatchQueue = DispatchQueue(label: "FullSeasonScheduleQueue", qos: .background)
+        
+        dispatchQueue.async
+        {
+            do
+            {
+                let realm = try! Realm()
+                
+                try realm.write
+                {
+                    realm.add(scheduledGames, update: .modified)
+                }
+            }
+            catch
+            {
+                print("Error saving scheduled games to the database: \(error.localizedDescription)")
+            }
+            
+            print("\n\nFull season schedule was successfully saved to the database...\n\n")
+            
+            print("\n\nTotal elapsed time to save full season schedule is: \((Date().timeIntervalSince1970 - startTime).rounded()) seconds.\n\n")
+            print(Realm.Configuration.defaultConfiguration.fileURL!)
+        }
+    }
+    
+    func saveRosters(_ playerList: [NHLPlayer])
+    {
+        print("\n\nIn DatabaseManager.saveRosters method...\n\n")
+        
+        let startTime = Date().timeIntervalSince1970
+        
+        let dispatchQueue = DispatchQueue(label: "PlayerRosterQueue", qos: .background)
+        
+        dispatchQueue.async
+        {
+            do
+            {
+                let realm = try! Realm()
+                
+                try realm.write
+                {
+                    realm.add(playerList, update: .modified)
+                }
+            }
+            catch
+            {
+                print("Error saving roster players to the database: \(error.localizedDescription)")
+            }
+            
+            print("\n\nRosters were successfully saved to the database...\n\n")
+            
+            print("\n\nTotal elapsed time to save roster players is: \((Date().timeIntervalSince1970 - startTime).rounded()) seconds.\n\n")
+            print(Realm.Configuration.defaultConfiguration.fileURL!)
+        }
+    }
+    
+    func savePlayerStatstics(_ playerStatisticsList: [PlayerStatistics])
+    {
+        print("\n\nIn DatabaseManager.savePlayerStatstics method...\n\n")
+        
+        let startTime = Date().timeIntervalSince1970
+
+        let dispatchQueue = DispatchQueue(label: "PlayerStatsQueue", qos: .background)
+
+        dispatchQueue.async
+        {
+            do
+            {
+                let realm = try! Realm()
+                
+                try realm.write
+                {
+                    realm.add(playerStatisticsList, update: .modified)
+                }
+            }
+            catch
+            {
+                print("Error saving player statistics to the database: \(error.localizedDescription)")
+            }
+            
+            print("\n\nPlayer stats were successfully saved to the database...\n\n")
+            
+            print("\n\nTotal elapsed time to save player stats is: \((Date().timeIntervalSince1970 - startTime).rounded()) seconds.\n\n")
+            print(Realm.Configuration.defaultConfiguration.fileURL!)
+        }
+    }
+    
+    // MARK: Retrieve methods
+    func retrieveTeamStatisticsByTeamId(__ teamId: Int) -> NHLTeam?
+    {
+        var team : NHLTeam?
+
         do
         {
             try realm.write
             {
-                let scheduledGames = realm.objects(NHLSchedule.self).filter("date = '\(TimeAndDateUtils.getCurrentDateAsString())'")
-                
-                mainViewController.performSegue(withIdentifier: "displayCalendar", sender: scheduledGames)
+                team = realm.objects(NHLTeam.self).filter("id = \(teamId)").first
+            }
+        }
+        catch
+        {
+            print("Error retrieving team result for \(teamId)!")
+        }
+
+        return team
+    }
+    
+    func retrieveTeamInjuriesByTeamId(_ teamId: Int) -> [NHLPlayerInjury]
+    {
+        var injuryResult: Results<NHLPlayerInjury>?
+
+        do
+        {
+            try realm.write
+            {
+                injuryResult = realm.objects(NHLPlayerInjury.self).filter("teamId ==\(teamId)")
+            }
+        }
+        catch
+        {
+            print("Error retrieving injuries!")
+        }
+
+        return injuryResult?.toArray(type: NHLPlayerInjury.self) ?? [NHLPlayerInjury]()
+    }
+    
+    func retrieveTeamScheduleById(_ teamId: Int) -> [NHLSchedule]
+    {
+        var teamSchedules : Results<NHLSchedule>?
+
+        let team = TeamManager.getTeamByID(teamId)
+
+        do
+        {
+            try realm.write
+            {
+                teamSchedules = realm.objects(NHLSchedule.self).filter("homeTeam = '\(team)' OR awayTeam = '\(team)'")
+            }
+        }
+        catch
+        {
+            print("Error retrieving schedule results for \(teamId)!")
+        }
+
+        return teamSchedules?.toArray(type: NHLSchedule.self) ?? [NHLSchedule]()
+    }
+    
+    func retrieveTeamByTeamId(_ teamId: Int) -> NHLTeam?
+    {
+        var team: NHLTeam?
+
+        do
+        {
+            try realm.write
+            {
+                team = realm.objects(NHLTeam.self).filter("id ==\(teamId)").first!
+            }
+        }
+        catch
+        {
+            print("Error retrieving team info!")
+        }
+
+        return team
+    }
+    
+    func retrieveRosterByTeamId(_ teamId: Int) -> [NHLPlayer]
+    {
+        var rosterResult: Results<NHLPlayer>?
+
+        do
+        {
+            try realm.write
+            {
+                rosterResult = realm.objects(NHLPlayer.self).filter("teamId ==\(teamId)")
+            }
+        }
+        catch
+        {
+            print("Error retrieving roster!")
+        }
+
+        return rosterResult?.toArray(type: NHLPlayer.self) ?? [NHLPlayer]()
+    }
+    
+    func retrieveStandings() -> [TeamStandings]
+    {
+        var standingsResult: Results<TeamStandings>?
+        
+        do
+        {
+            try realm.write
+            {
+                standingsResult = realm.objects(TeamStandings.self)
+            }
+        }
+        catch
+        {
+            print("Error retrieving team standings!")
+        }
+        
+        return standingsResult?.toArray(type: TeamStandings.self) ?? [TeamStandings]()
+    }
+    
+    func retrievePlayerById( _ id: Int) -> NHLPlayer
+    {
+        var playerResult: NHLPlayer?
+
+        do
+        {
+            try realm.write
+            {
+                playerResult = realm.objects(NHLPlayer.self).filter("id ==\(id)").first
+            }
+        }
+        catch
+        {
+            print("Error retrieving player!")
+        }
+
+        return playerResult!
+    }
+    
+    func retrievePlayerStatisticsById(_ playerId: Int) -> PlayerStatistics
+    {
+        var playerStatisticsResult: PlayerStatistics?
+
+        do
+        {
+            try realm.write
+            {
+                playerStatisticsResult = realm.objects(PlayerStatistics.self).filter("id ==\(playerId)").first
+            }
+        }
+        catch
+        {
+            print("Error retrieving player statistics!")
+        }
+
+        return playerStatisticsResult!
+    }
+    
+    func retrieveTodaysGames() -> [NHLSchedule]
+    {
+        var scheduledGamesResult: Results<NHLSchedule>?
+        
+        do
+        {
+            try realm.write
+            {
+                scheduledGamesResult = realm.objects(NHLSchedule.self).filter("date = '\(TimeAndDateUtils.getCurrentDateAsString())'")
             }
         }
         catch
         {
             print("Error retrieving today's games!")
         }
+        
+        return scheduledGamesResult?.toArray(type: NHLSchedule.self) ?? [NHLSchedule]()
     }
     
-    func retrieveGames(_ date: Date) -> [Schedule]
+    func retrieveScheduledGamesByDate(_ date: Date) -> [Schedule]
     {
         var schedules = [Schedule]()
         

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76593B3823AB278E00F36C1E /* LinkingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76593B3723AB278E00F36C1E /* LinkingHelper.swift */; };
 		766538AB23A64336008D8F5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766538AA23A64336008D8F5F /* AppDelegate.swift */; };
 		766538AD23A64336008D8F5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766538AC23A64336008D8F5F /* SceneDelegate.swift */; };
 		766538AF23A64336008D8F5F /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766538AE23A64336008D8F5F /* WelcomeScreenViewController.swift */; };
@@ -41,8 +42,6 @@
 		7665391023A769C9008D8F5F /* FutureScheduleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7665390623A769C9008D8F5F /* FutureScheduleViewCell.swift */; };
 		7665391423A769EA008D8F5F /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7665391223A769EA008D8F5F /* CellView.swift */; };
 		7665391523A769EA008D8F5F /* CellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7665391323A769EA008D8F5F /* CellView.xib */; };
-		7665391D23A76A2C008D8F5F /* TimeAndDateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7665391723A76A2C008D8F5F /* TimeAndDateUtils.swift */; };
-		7665391E23A76A2C008D8F5F /* ConversionUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7665391823A76A2C008D8F5F /* ConversionUtils.swift */; };
 		7665391F23A76A2C008D8F5F /* ScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7665391A23A76A2C008D8F5F /* ScheduleTableViewCell.xib */; };
 		7665392023A76A2C008D8F5F /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7665391B23A76A2C008D8F5F /* Schedule.swift */; };
 		7665392123A76A2C008D8F5F /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7665391C23A76A2C008D8F5F /* ScheduleTableViewCell.swift */; };
@@ -57,6 +56,17 @@
 		7665393623A76D08008D8F5F /* PlayingProbabilityEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7665392D23A76D07008D8F5F /* PlayingProbabilityEnum.swift */; };
 		7665393823A76D58008D8F5F /* TeamManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7665393723A76D58008D8F5F /* TeamManager.swift */; };
 		7665393A23A76DAF008D8F5F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7665393923A76DAF008D8F5F /* Constants.swift */; };
+		7665393E23A77001008D8F5F /* TimeAndDateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7665393C23A77001008D8F5F /* TimeAndDateUtils.swift */; };
+		7665393F23A77001008D8F5F /* ConversionUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7665393D23A77001008D8F5F /* ConversionUtils.swift */; };
+		7665394123A77092008D8F5F /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7665394023A77092008D8F5F /* DatabaseManager.swift */; };
+		7665394323A77282008D8F5F /* MenuCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7665394223A77282008D8F5F /* MenuCategory.swift */; };
+		7665394523A772E8008D8F5F /* GameLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7665394423A772E8008D8F5F /* GameLog.swift */; };
+		7665394723A775C6008D8F5F /* ScoringSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7665394623A775C6008D8F5F /* ScoringSummary.swift */; };
+		7665394923A77642008D8F5F /* NHLStandings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7665394823A77642008D8F5F /* NHLStandings.swift */; };
+		7665394B23A7776B008D8F5F /* SeasonSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7665394A23A7776B008D8F5F /* SeasonSchedule.swift */; };
+		7665394D23A77827008D8F5F /* RosterPlayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7665394C23A77827008D8F5F /* RosterPlayers.swift */; };
+		7665395023A7807F008D8F5F /* ConvertNetworkModelToDatabaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7665394F23A7807F008D8F5F /* ConvertNetworkModelToDatabaseModel.swift */; };
+		7665395223A83D9B008D8F5F /* DisplayCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7665395123A83D9B008D8F5F /* DisplayCalendarViewController.swift */; };
 		80075FFBAEC9BF88D3C243A4 /* Pods_HockeyInfo_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1387EFE794C8CFF4D2060F83 /* Pods_HockeyInfo_Swift.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +91,7 @@
 		081A34FA560CB84608037D42 /* Pods-HockeyInfo-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HockeyInfo-Swift.debug.xcconfig"; path = "Target Support Files/Pods-HockeyInfo-Swift/Pods-HockeyInfo-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		1387EFE794C8CFF4D2060F83 /* Pods_HockeyInfo_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HockeyInfo_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43745ED212ADDA948A96D136 /* Pods-HockeyInfo-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HockeyInfo-Swift.release.xcconfig"; path = "Target Support Files/Pods-HockeyInfo-Swift/Pods-HockeyInfo-Swift.release.xcconfig"; sourceTree = "<group>"; };
+		76593B3723AB278E00F36C1E /* LinkingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkingHelper.swift; sourceTree = "<group>"; };
 		766538A723A64336008D8F5F /* HockeyInfo-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HockeyInfo-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		766538AA23A64336008D8F5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		766538AC23A64336008D8F5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,8 +132,6 @@
 		7665390623A769C9008D8F5F /* FutureScheduleViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FutureScheduleViewCell.swift; sourceTree = "<group>"; };
 		7665391223A769EA008D8F5F /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		7665391323A769EA008D8F5F /* CellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellView.xib; sourceTree = "<group>"; };
-		7665391723A76A2C008D8F5F /* TimeAndDateUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeAndDateUtils.swift; sourceTree = "<group>"; };
-		7665391823A76A2C008D8F5F /* ConversionUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversionUtils.swift; sourceTree = "<group>"; };
 		7665391A23A76A2C008D8F5F /* ScheduleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleTableViewCell.xib; sourceTree = "<group>"; };
 		7665391B23A76A2C008D8F5F /* Schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		7665391C23A76A2C008D8F5F /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
@@ -137,6 +146,17 @@
 		7665392D23A76D07008D8F5F /* PlayingProbabilityEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayingProbabilityEnum.swift; sourceTree = "<group>"; };
 		7665393723A76D58008D8F5F /* TeamManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamManager.swift; sourceTree = "<group>"; };
 		7665393923A76DAF008D8F5F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7665393C23A77001008D8F5F /* TimeAndDateUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeAndDateUtils.swift; sourceTree = "<group>"; };
+		7665393D23A77001008D8F5F /* ConversionUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversionUtils.swift; sourceTree = "<group>"; };
+		7665394023A77092008D8F5F /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		7665394223A77282008D8F5F /* MenuCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCategory.swift; sourceTree = "<group>"; };
+		7665394423A772E8008D8F5F /* GameLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLog.swift; sourceTree = "<group>"; };
+		7665394623A775C6008D8F5F /* ScoringSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoringSummary.swift; sourceTree = "<group>"; };
+		7665394823A77642008D8F5F /* NHLStandings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NHLStandings.swift; sourceTree = "<group>"; };
+		7665394A23A7776B008D8F5F /* SeasonSchedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonSchedule.swift; sourceTree = "<group>"; };
+		7665394C23A77827008D8F5F /* RosterPlayers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RosterPlayers.swift; sourceTree = "<group>"; };
+		7665394F23A7807F008D8F5F /* ConvertNetworkModelToDatabaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertNetworkModelToDatabaseModel.swift; sourceTree = "<group>"; };
+		7665395123A83D9B008D8F5F /* DisplayCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayCalendarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,22 +219,23 @@
 		766538A923A64336008D8F5F /* HockeyInfo-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				7665393923A76DAF008D8F5F /* Constants.swift */,
+				766538AA23A64336008D8F5F /* AppDelegate.swift */,
+				766538AC23A64336008D8F5F /* SceneDelegate.swift */,
+				766538DA23A6455C008D8F5F /* View Controllers */,
+				766538DD23A75863008D8F5F /* Managers */,
+				7665394E23A7803D008D8F5F /* Helpers */,
+				7665393B23A77001008D8F5F /* Utils */,
 				7665392523A76D07008D8F5F /* Extensions */,
 				7665392223A76D07008D8F5F /* Error Enums */,
 				7665392723A76D07008D8F5F /* Enums */,
-				7665393923A76DAF008D8F5F /* Constants.swift */,
 				7665391923A76A2C008D8F5F /* Schedules */,
-				7665391623A76A2C008D8F5F /* Utils */,
 				7665391123A769EA008D8F5F /* DateCellCreatedWithXIB */,
 				766538FC23A769C9008D8F5F /* Cells Created With XIB */,
 				766538F923A769A0008D8F5F /* Progress Bar */,
 				766538E223A76973008D8F5F /* Database Models */,
 				766538E123A75BC1008D8F5F /* Models */,
 				766538E023A75B9F008D8F5F /* View */,
-				766538DD23A75863008D8F5F /* Managers */,
-				766538AA23A64336008D8F5F /* AppDelegate.swift */,
-				766538AC23A64336008D8F5F /* SceneDelegate.swift */,
-				766538DA23A6455C008D8F5F /* View Controllers */,
 				766538B323A64338008D8F5F /* Assets.xcassets */,
 				766538B523A64338008D8F5F /* LaunchScreen.storyboard */,
 				766538B823A64338008D8F5F /* Info.plist */,
@@ -243,6 +264,7 @@
 		766538DA23A6455C008D8F5F /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7665395123A83D9B008D8F5F /* DisplayCalendarViewController.swift */,
 				766538AE23A64336008D8F5F /* WelcomeScreenViewController.swift */,
 				766538DB23A7512E008D8F5F /* MainMenuViewController.swift */,
 			);
@@ -252,6 +274,7 @@
 		766538DD23A75863008D8F5F /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				7665394023A77092008D8F5F /* DatabaseManager.swift */,
 				7665393723A76D58008D8F5F /* TeamManager.swift */,
 				766538DE23A7592A008D8F5F /* NetworkManager.swift */,
 			);
@@ -269,6 +292,12 @@
 		766538E123A75BC1008D8F5F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7665394C23A77827008D8F5F /* RosterPlayers.swift */,
+				7665394A23A7776B008D8F5F /* SeasonSchedule.swift */,
+				7665394823A77642008D8F5F /* NHLStandings.swift */,
+				7665394623A775C6008D8F5F /* ScoringSummary.swift */,
+				7665394423A772E8008D8F5F /* GameLog.swift */,
+				7665394223A77282008D8F5F /* MenuCategory.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -325,15 +354,6 @@
 			path = DateCellCreatedWithXIB;
 			sourceTree = "<group>";
 		};
-		7665391623A76A2C008D8F5F /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				7665391723A76A2C008D8F5F /* TimeAndDateUtils.swift */,
-				7665391823A76A2C008D8F5F /* ConversionUtils.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
 		7665391923A76A2C008D8F5F /* Schedules */ = {
 			isa = PBXGroup;
 			children = (
@@ -372,6 +392,25 @@
 				7665392D23A76D07008D8F5F /* PlayingProbabilityEnum.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		7665393B23A77001008D8F5F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7665393C23A77001008D8F5F /* TimeAndDateUtils.swift */,
+				7665393D23A77001008D8F5F /* ConversionUtils.swift */,
+			);
+			name = Utils;
+			path = "../../HockeyInfo/Hockey Info/Utils";
+			sourceTree = "<group>";
+		};
+		7665394E23A7803D008D8F5F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7665394F23A7807F008D8F5F /* ConvertNetworkModelToDatabaseModel.swift */,
+				76593B3723AB278E00F36C1E /* LinkingHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		FA58142CF7FC22305522C080 /* Frameworks */ = {
@@ -566,16 +605,23 @@
 			files = (
 				766538F123A76973008D8F5F /* NHLGameLog.swift in Sources */,
 				7665393A23A76DAF008D8F5F /* Constants.swift in Sources */,
+				7665394123A77092008D8F5F /* DatabaseManager.swift in Sources */,
 				766538DC23A7512E008D8F5F /* MainMenuViewController.swift in Sources */,
+				7665395223A83D9B008D8F5F /* DisplayCalendarViewController.swift in Sources */,
+				7665393E23A77001008D8F5F /* TimeAndDateUtils.swift in Sources */,
 				766538F623A76973008D8F5F /* TeamStandings.swift in Sources */,
 				7665391423A769EA008D8F5F /* CellView.swift in Sources */,
 				766538F023A76973008D8F5F /* NHLTeam.swift in Sources */,
+				7665395023A7807F008D8F5F /* ConvertNetworkModelToDatabaseModel.swift in Sources */,
+				76593B3823AB278E00F36C1E /* LinkingHelper.swift in Sources */,
+				7665393F23A77001008D8F5F /* ConversionUtils.swift in Sources */,
 				7665390F23A769C9008D8F5F /* ScoreCell.swift in Sources */,
 				766538AF23A64336008D8F5F /* WelcomeScreenViewController.swift in Sources */,
-				7665391E23A76A2C008D8F5F /* ConversionUtils.swift in Sources */,
 				766538F523A76973008D8F5F /* NHLScoringSummary.swift in Sources */,
+				7665394D23A77827008D8F5F /* RosterPlayers.swift in Sources */,
 				7665393523A76D08008D8F5F /* PositionEnum.swift in Sources */,
 				7665393423A76D08008D8F5F /* PeriodEnum.swift in Sources */,
+				7665394923A77642008D8F5F /* NHLStandings.swift in Sources */,
 				766538F223A76973008D8F5F /* NHLPlayerInjury.swift in Sources */,
 				7665390D23A769C9008D8F5F /* ScoreSummaryCell.swift in Sources */,
 				766538DF23A7592A008D8F5F /* NetworkManager.swift in Sources */,
@@ -586,16 +632,19 @@
 				7665393323A76D08008D8F5F /* DivisionEnum.swift in Sources */,
 				7665390823A769C9008D8F5F /* StandingsCell.swift in Sources */,
 				766538F323A76973008D8F5F /* NHLPlayer.swift in Sources */,
+				7665394723A775C6008D8F5F /* ScoringSummary.swift in Sources */,
+				7665394323A77282008D8F5F /* MenuCategory.swift in Sources */,
 				7665393623A76D08008D8F5F /* PlayingProbabilityEnum.swift in Sources */,
 				766538AB23A64336008D8F5F /* AppDelegate.swift in Sources */,
 				7665392E23A76D08008D8F5F /* DatabaseErrorEnum.swift in Sources */,
 				766538F423A76973008D8F5F /* PlayerStatistics.swift in Sources */,
-				7665391D23A76A2C008D8F5F /* TimeAndDateUtils.swift in Sources */,
 				766538FB23A769A0008D8F5F /* TYProgressBar.swift in Sources */,
 				7665393123A76D08008D8F5F /* PlayedStatusEnum.swift in Sources */,
 				766538AD23A64336008D8F5F /* SceneDelegate.swift in Sources */,
+				7665394523A772E8008D8F5F /* GameLog.swift in Sources */,
 				766538EF23A76973008D8F5F /* TeamStatistics.swift in Sources */,
 				7665393023A76D08008D8F5F /* Extensions.swift in Sources */,
+				7665394B23A7776B008D8F5F /* SeasonSchedule.swift in Sources */,
 				7665391023A769C9008D8F5F /* FutureScheduleViewCell.swift in Sources */,
 				7665393223A76D08008D8F5F /* ConferenceEnum.swift in Sources */,
 				7665392023A76A2C008D8F5F /* Schedule.swift in Sources */,

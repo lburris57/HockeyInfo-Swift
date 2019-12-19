@@ -270,12 +270,12 @@ struct GoaltendingData: Decodable
 struct PlayerInjuries: Decodable
 {
     var lastUpdatedOn: String
-    var playerInfoList: [PlayerInjuryInfo]
+    var playerInjuryInfoList: [PlayerInjuryInfo]
     
     private enum CodingKeys : String, CodingKey
     {
         case lastUpdatedOn = "lastUpdatedOn"
-        case playerInfoList = "players"
+        case playerInjuryInfoList = "players"
     }
 }
 

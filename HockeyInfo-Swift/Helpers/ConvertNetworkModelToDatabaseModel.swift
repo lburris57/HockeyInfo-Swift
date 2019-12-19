@@ -132,7 +132,7 @@ struct ConvertNetworkModelToDatabaseModel
     {
         var nhlPlayerInjuryList = [NHLPlayerInjury]()
         
-        for playerInfo in playerInjuries.playerInfoList
+        for playerInfo in playerInjuries.playerInjuryInfoList
         {
             let playerInjury = NHLPlayerInjury()
             let playerId = playerInfo.id
