@@ -28,6 +28,7 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidLoad()
         
         mainMenuView.dataSource = self
+        mainMenuView.delegate = self
         
         if(databaseManager.mainMenuCategoriesRequiresSaving())
         {
@@ -142,25 +143,37 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.deselectRow(at: indexPath, animated: true)
 
         let category = categories[indexPath.row].category
+        
+        //print("Category is \(category)")
 
         if(category == "Season Schedule")
         {
+            print("Season Schedule was selected...")
+            
             databaseManager.retrieveTodaysGames()
         }
-//        else if(category == "Scores")
-//        {
-//            networkManager.updateScheduleForDate(Date())
-//
-//            databaseManager.displaySchedule(self, "displayScores")
-//        }
-//        else if(category == "Team Information")
-//        {
-//            databaseManager.displayTeams(self, category)
-//        }
-//        else if(category == "Standings")
-//        {
-//            databaseManager.displayStandings(self)
-//        }
+        else if(category == "Scores")
+        {
+            networkManager.updateScheduleForDate(Date())
+
+            print("Scores was selected...")
+        }
+        else if(category == "Team Information List")
+        {
+            print("Team Information was selected...")
+        }
+            else if(category == "Search Player Information")
+            {
+                print("Search Player Information was selected...")
+            }
+        else if(category == "Standings")
+        {
+            print("Standings was selected...")
+        }
+        else if(category == "Settings")
+        {
+            print("Settings was selected...")
+        }
     }
     
     override func performSegue(withIdentifier identifier: String, sender: Any?)
@@ -199,7 +212,7 @@ class MainMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     }
 }
 
-extension MainMenuViewController: NetworkManagerDelegate
+extension UIViewController: NetworkManagerDelegate
 {
     func didPerformNetworkCall<T>(_ obj: T)
     {
@@ -219,12 +232,54 @@ extension MainMenuViewController: NetworkManagerDelegate
         {
             
         }
-        
     }
     
     func didFailWithError(error: Error)
     {
         print(error.localizedDescription)
         fatalError(error.localizedDescription)
+    }
+
+    //  Check to see if the table has been loaded.
+    //  If not, the data will be retrieved from the web service, otherwise it will be retrieved from the database
+    func needsNetworkCall(_ table: String) -> Bool
+    {
+        if(table == TableEnum.schedule.rawValue)
+        {
+            if DatabaseManager().scheduleRequiresSaving()
+            {
+                return true
+            }
+        }
+        else if(table == TableEnum.team.rawValue)
+        {
+            if DatabaseManager().teamRosterRequiresSaving()
+            {
+                return true
+            }
+        }
+        else if(table == TableEnum.gameLog.rawValue)
+        {
+            if DatabaseManager().gameLogRequiresSaving()
+            {
+                return true
+            }
+        }
+        else if(table == TableEnum.playerStats.rawValue)
+        {
+            if DatabaseManager().playerStatsRequiresSaving()
+            {
+                return true
+            }
+        }
+        else if(table == TableEnum.teamStandings.rawValue)
+        {
+            if DatabaseManager().teamStandingsRequiresSaving()
+            {
+                return true
+            }
+        }
+        
+        return false
     }
 }
